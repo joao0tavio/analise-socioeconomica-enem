@@ -39,7 +39,7 @@ dict_renda = {
 print("Carregando dataset (pode demorar um pouco)...")
 df = pd.read_csv('dados/MICRODADOS_ENEM_2021.csv', sep=';', encoding='latin-1', usecols=colunas_selecionadas)
 
-# Limpeza Inicial: Removemos alunos que faltaram em ALGUMA prova (nota NaN) para não distorcer a média
+# Limpeza Inicial: Removemos alunos que faltaram em alguma prova
 df.dropna(subset=['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_LC', 'NU_NOTA_MT', 'NU_NOTA_REDACAO'], inplace=True)
 
 # Criar Nota Média Geral
@@ -50,6 +50,5 @@ df['RENDA_NUMERICA'] = df['Q006'].map(dict_renda)
 
 print(f"Dados prontos. Total de alunos válidos para análise: {len(df)}")
 print(df[['Q006', 'RENDA_NUMERICA', 'NOTA_FINAL']].head())
-
 
 df.to_csv('dados/enem_2021_limpo.csv', index=False)
