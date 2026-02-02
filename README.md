@@ -24,7 +24,7 @@ O projeto foi dividido em etapas de pipeline de dados:
 ### 1. A Desigualdade Visualizada
 A análise exploratória revelou uma correlação clara: conforme a renda sobe, a mediana das notas aumenta consistentemente.
 
-![Regressão Escolas](resultados\grafico_regressao_escolas.png)
+![Regressão Escolas](resultados/grafico_regressao_escolas.png)
 *O gráfico acima mostra duas tendências paralelas: alunos de escola privada (vermelho) partem de uma nota base superior aos da pública (azul), mesmo com a mesma renda.*
 
 ### 2. O Modelo Matemático (Machine Learning)
