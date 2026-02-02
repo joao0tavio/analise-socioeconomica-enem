@@ -29,17 +29,17 @@ modelo.fit(X_train, y_train)
 # Avaliação
 y_pred = modelo.predict(X_test)
 
-print("--- Resultados da Regressão Múltipla ---")
+print("Resultados da Regressão Múltipla:")
 print(f"Intercepto (Nota base Escola Pública + Sem Renda): {modelo.intercept_:.2f}")
 print(f"Peso da Renda (a cada R$ 1,00): {modelo.coef_[0]:.4f}")
 print(f"Bônus Escola Privada (Pontos extras só por ser privada): {modelo.coef_[1]:.2f}")
-print(f"\nNovo R²: {r2_score(y_test, y_pred):.4f}")
+print(f"\nR²: {r2_score(y_test, y_pred):.4f}")
 
 # SIMULAÇÃO COMPARATIVA
 # Vamos comparar dois alunos com a mesma renda (R$ 3.000), mas escolas diferentes
 renda_simulada = 3000
-aluno_publica = modelo.predict([[renda_simulada, 0]])[0] 
-aluno_privada = modelo.predict([[renda_simulada, 1]])[0] 
+aluno_publica = modelo.predict([[renda_simulada, 0]])[0]
+aluno_privada = modelo.predict([[renda_simulada, 1]])[0]
 
 print(f"\n--- Simulação (Renda R$ 3.000) ---")
 print(f"Nota na Escola Pública: {aluno_publica:.1f}")

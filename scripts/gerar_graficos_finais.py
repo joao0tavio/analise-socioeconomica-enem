@@ -32,7 +32,6 @@ plt.ylim(0, 1000)
 plt.xlim(0, 20000)
 
 plt.savefig('grafico_regressao_escolas.png', dpi=300)
-print("Gráfico 1 salvo como 'grafico_regressao_escolas.png'")
 
 # GRÁFICO 2: Comparação Direta (Boxplot)
 plt.figure(figsize=(8, 6))
@@ -41,4 +40,3 @@ plt.title('Distribuição de Notas por Tipo de Escola')
 plt.xlabel('')
 plt.ylabel('Nota Final')
 plt.savefig('grafico_boxplot_escolas.png', dpi=300)
-print("Gráfico 2 salvo como 'grafico_boxplot_escolas.png'")
